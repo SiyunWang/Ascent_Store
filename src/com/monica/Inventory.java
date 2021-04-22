@@ -10,6 +10,10 @@ public class Inventory {
         System.out.println(numberOfItem + " " + itemsList[index].name + " was added successfully!"  );
     }
 
+    public static void decreaseItemQuantity(int index, int numberToDecrease) {
+        itemsList[index].numOfProductAvailable -= numberToDecrease;
+    }
+
     public static void initiateItem(){
         Item item1 = new Item("pocky", 1.50);
         Item item2 = new Item("chips", 2.50);
