@@ -12,7 +12,6 @@ public class Store {
 
     public Inventory ourInventory = new Inventory();
 
-
     public void welcome() {
         System.out.println("Welcome to our store!");
         ourInventory.initiateItem();
@@ -42,8 +41,6 @@ public class Store {
             System.out.println("Here is your change: $" + (amountPaid - currentBalance));
             currentBalance = 0;
         }
-
-
     }
 
     public void shoppingCart() {
@@ -51,12 +48,12 @@ public class Store {
 //        int[] pendingItems = new int[ourInventory.itemsList.length];
 
         int quantity = 0;
-        int itemIndex= Integer.MAX_VALUE;
+        int itemIndex= 0;
 
         while (isShopping) {
             boolean indexIsInteger = false;
             boolean indexInBound = false;
-            while (!indexIsInteger && itemIndex >= ourInventory.itemsList.length){
+            while (!indexIsInteger){
                 try {
                     System.out.println("Enter the item number you desired:");
                     itemIndex = scanner.nextInt();
